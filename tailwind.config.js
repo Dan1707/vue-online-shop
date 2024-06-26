@@ -12,7 +12,7 @@ export default {
 
         tablets: { max: "576px" },
 
-        tablet: { max: "768px" },
+        tablet: { max: "908px" },
 
         laptop: { max: "1024px" },
 
