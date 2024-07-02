@@ -2,9 +2,199 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Inter";
-  src: url("./fonts/Inter-Regular.ttf");
+/* colors */
+:root {
+  --primary: #0d6efd;
+  --secondary: #505050;
+  --dark: #1c1c1c;
+  --light: #ffffff;
+  --base: #e3f0ff;
+  --muted: #c4ffcb;
+  --green: #00b517;
+  --orange: #ff9017;
+  --red: #fa3434;
+  --pink: #ffe6bf;
+  --gray-100: #f7fafc;
+  --gray-200: #eff2f4;
+  --gray-300: #dee2e7;
+  --gray-400: #bdc4cd;
+  --gray-500: #8b96a5;
+  --gray-600: #505050;
+}
+
+@layer base {
+  /* typography */
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Thin.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-ExtraLight.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Light.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-SemiBold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-ExtraBold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Black.woff2") format("woff2");
+  }
+
+  /* styles */
+  h1 {
+    color: var(--dark);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: -1.6px;
+  }
+  h2 {
+    color: var(--dark);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 39px;
+    letter-spacing: -0.2px;
+  }
+  h3 {
+    color: var(--dark);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+  }
+  h4 {
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
+  h5 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+  }
+  h6 {
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0px;
+  }
+
+  .body-default {
+    color: var(--gray-600);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  .body-default-muted {
+    color: var(--gray-500);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  .body-small {
+    color: var(--gray-600);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+
+  .body-small-muted {
+    color: var(--gray-500);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+
+  .body-micro {
+    color: var(--gray-600);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+
+  .body-micro-muted {
+    color: var(--gray-500);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+  }
+
+  .container {
+    @apply max-w-[1130px] px-5 m-auto;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
 }
 
 * {
