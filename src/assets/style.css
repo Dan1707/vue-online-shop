@@ -5,6 +5,7 @@
 /* colors */
 :root {
   --primary: #0d6efd;
+  --primary-light: #e5f1ff;
   --secondary: #505050;
   --dark: #1c1c1c;
   --light: #ffffff;
@@ -202,4 +203,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f7fafc;
 }

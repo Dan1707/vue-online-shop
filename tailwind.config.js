@@ -16,6 +16,7 @@ export default {
       },
       colors: {
         primary: "var(--primary)",
+        "primary-light": "var( --primary-light)",
         dark: "var(--dark)",
         light: "var(--light)",
         def: "var(--base)",

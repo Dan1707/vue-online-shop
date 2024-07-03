@@ -2,4 +2,5 @@
 
 <template>
   <ShopHeader />
+  <ShopHero />
 </template>
