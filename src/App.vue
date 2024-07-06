@@ -3,4 +3,5 @@
 <template>
   <ShopHeader />
   <ShopHero />
+  <ShopSale />
 </template>

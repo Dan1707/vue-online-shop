@@ -35,7 +35,7 @@ const changeCategory = (name: string) => {
 <template>
   <section class="mt-[20px] tablets:mt-[0]">
     <div
-      class="container hero flex-between bg-light p-[20px] tablets:p-[0] tablets:w-full tablets:mt-[0] border border-gray-300 gap-3 rounded-lg"
+      class="container border-container hero flex-between tablets:p-[0] tablets:w-full tablets:mt-[0] gap-3 rounded-lg"
     >
       <nav class="max-w-[250px] basis-full tablets:hidden">
         <ul>

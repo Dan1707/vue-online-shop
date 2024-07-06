@@ -126,6 +126,12 @@
     line-height: 28px;
     letter-spacing: -0.2px;
   }
+
+  @media (max-width: 576px) {
+    h4 {
+      font-size: 18px;
+    }
+  }
   h5 {
     color: var(--dark);
     font-size: 18px;
@@ -190,11 +196,15 @@
   }
 
   .container {
-    @apply max-w-[1130px] px-5 m-auto;
+    @apply max-w-[1130px] px-5 m-auto bg-light;
   }
 
   .flex-between {
     @apply flex items-center justify-between;
+  }
+
+  .border-container {
+    @apply p-[20px] rounded-lg border border-gray-300;
   }
 }
 

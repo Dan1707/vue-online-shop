@@ -12,6 +12,9 @@ import ShopTabletInput from "./header/responsive/ShopTabletInput.vue";
 import ShopHeaderCategories from "./header/ShopHeaderCategories.vue";
 import ShopTabletCategories from "./header/responsive/ShopTabletCategories.vue";
 import ShopHero from "./hero/ShopHero.vue";
+import ShopSale from "./sale/ShopSale.vue";
+import ShopTime from "./sale/ShopTime.vue";
+import ShopSaleItem from "./sale/ShopSaleItem.vue";
 
 interface Component {
   name: string;
@@ -32,6 +35,9 @@ const components: Component[] = [
   { name: "ShopHeaderCategories", component: ShopHeaderCategories },
   { name: "ShopTabletCategories", component: ShopTabletCategories },
   { name: "ShopHero", component: ShopHero },
+  { name: "ShopSale", component: ShopSale },
+  { name: "ShopTime", component: ShopTime },
+  { name: "ShopSaleItem", component: ShopSaleItem },
 ];
 
 const plugin = {
