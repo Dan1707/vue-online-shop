@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header class="min-w-full sticky bg-light top-0 z-[100]">
+  <header class="min-w-full sticky bg-light top-0 z-[100] border-b-[2px]">
     <div
       class="p-[22px] container flex-between gap-5 tablet:gap-3 tablets:py-[10px] tablets:px-[16px]"
     >

@@ -55,18 +55,15 @@ const changeCategory = (name: string) => {
         </ul>
       </nav>
       <div
-        class="max-w-full min-h-[394px] basis-full banner relative top-[0] px-[44px] py-[56px]"
+        class="max-w-full min-h-[394px] basis-full banner relative top-[0] px-[44px] py-[56px] tablets:p-[25px]"
       >
         <div>
           <p class="text-[28px] leading-[34px] tablets:text-[22px]">
             Latest trending
           </p>
           <h2 class="tablets:text-[22px]">Electronic items</h2>
-          <button
-            class="px-[16px] py-[10px] bg-light rounded-lg body-default font-semibold text-dark mt-[17px] tablets:text-primary tablets:shadow-md tablets:text-[13px]"
-          >
-            Learn more
-          </button>
+
+          <Btn size="md" color="light" class="mt-[17px]">Learn more</Btn>
         </div>
       </div>
       <div
@@ -81,8 +78,10 @@ const changeCategory = (name: string) => {
             </p>
           </div>
           <div class="mt-[15px]">
-            <BtnNormal class="w-full py-[7px]">Join now</BtnNormal>
-            <BtnLight class="w-full py-[7px] mt-[7px]">Log in</BtnLight>
+            <Btn size="sm" color="primary" class="w-full">Join now</Btn>
+            <Btn size="sm" color="primary-light" class="mt-[7px] w-full"
+              >Log in</Btn
+            >
           </div>
         </article>
         <article class="bg-[#F38332] rounded-lg p-[16px] basis-full w-full">

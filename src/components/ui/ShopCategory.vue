@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const props = defineProps({
   arr: {
@@ -15,7 +15,6 @@ const currentCategory = ref(`${props.arr[0].text}`);
 interface category {
   text: string;
   isCurrent: boolean;
-  id: number;
 }
 
 const changeCategory = (name: string) => {
@@ -29,40 +28,26 @@ const changeCategory = (name: string) => {
   });
 };
 
-const handleClickOutside = (event: MouseEvent) => {
-  const categoriesElement = document.querySelector(".categories-container");
-  console.log("Event Target:", event.target);
-  console.log("Categories Element:", categoriesElement);
-  if (categoriesElement && !categoriesElement.contains(event.target as Node)) {
-    showCategories.value = false;
-  }
+const handleClickOutside = () => {
+  showCategories.value = false;
 };
 
 onMounted(() => {
   document.addEventListener("click", handleClickOutside);
 });
-
-onUnmounted(() => {
-  document.addEventListener("click", handleClickOutside);
-});
 </script>
 
 <template>
-  <div
-    class="basis-full text-center relative h-[44px]"
-    :class="{ 'categories-container': true, active: showCategories }"
-  >
+  <div class="basis-full text-center relative h-[44px] categories-container">
     <div class="bg-light flex flex-col" :class="{ active: showCategories }">
       <button
         class="p-[10px]"
-        @click.prevent="showCategories = !showCategories"
+        @click.stop.prevent="showCategories = !showCategories"
       >
         <span class="flex-between gap-2 cursor-pointer">
           <p class="body-default">
             {{ currentCategory }}
           </p>
-          <slot name="current-ico"></slot>
-
           <img
             src="/src/assets/img/arrow-b.svg"
             class="duration-300"
@@ -74,7 +59,7 @@ onUnmounted(() => {
       <ul class="flex flex-col z-[200]" v-if="showCategories">
         <li
           v-for="nav in arr"
-          :key="nav.id"
+          :key="nav"
           class="cursor-pointer px-[15px] py-[10px] hover:bg-[#E5F1FF] duration-300"
           @click="
             changeCategory(nav.text);
@@ -83,7 +68,6 @@ onUnmounted(() => {
         >
           <span v-if="nav.isCurrent">
             <p class="text-primary">{{ nav.text }}</p>
-            <slot name="item-ico"></slot>
           </span>
           <span v-else>
             <p>{{ nav.text }}</p>
