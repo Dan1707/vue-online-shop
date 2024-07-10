@@ -36,4 +36,5 @@ const arr2 = [
     blockImg="/src/assets/img/item-block-2.jpeg"
     blockTitle="Consumer electronics and gadgets"
   />
+  <ShopRecommend />
 </template>

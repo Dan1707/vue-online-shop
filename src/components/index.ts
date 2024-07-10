@@ -15,6 +15,8 @@ import ShopSaleItem from "./sale/ShopSaleItem.vue";
 import ShopItemsBlock from "./items-block/ShopItemsBlock.vue";
 import ShopSimpleItem from "./items-block/ShopSimpleItem.vue";
 import Btn from "./ui/Btn.vue";
+import ShopRecommend from "./recommend/ShopRecommend.vue";
+import ShopItem from "./recommend/ShopItem.vue";
 
 interface Component {
   name: string;
@@ -38,6 +40,8 @@ const components: Component[] = [
   { name: "ShopItemsBlock", component: ShopItemsBlock },
   { name: "ShopSimpleItem", component: ShopSimpleItem },
   { name: "Btn", component: Btn },
+  { name: "ShopRecommend", component: ShopRecommend },
+  { name: "ShopItem", component: ShopItem },
 ];
 
 const plugin = {
