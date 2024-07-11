@@ -1,56 +1,26 @@
 <script setup lang="ts">
-const arr = [
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-  {
-    text: "T-shirts with multiple colors, for men",
-    price: 30,
-    img: "/src/assets/img/t-shirt.png",
-  },
-];
+import axios from "axios";
+import { onMounted, ref } from "vue";
+
+const arr = ref<object[]>([]);
+
+const getRecProducts = async () => {
+  try {
+    const res = await axios.get(
+      "https://api.escuelajs.co/api/v1/products?offset=10&limit=10"
+    );
+
+    const data = await res.data;
+
+    arr.value = [...data];
+  } catch (error) {
+    console.log(`ShopRecommend: ${error}`);
+  }
+};
+
+onMounted(() => {
+  getRecProducts();
+});
 </script>
 
 <template>
