@@ -37,4 +37,5 @@ const arr2 = [
     blockTitle="Consumer electronics and gadgets"
   />
   <ShopRecommend />
+  <ShopServices />
 </template>
