@@ -28,7 +28,7 @@ const arr = [
     <div class="container bg-transparent">
       <h3>Our extra services</h3>
       <div
-        class="grid grid-cols-4 mt-[22px] justify-between items-center gap-5"
+        class="grid grid-cols-4 laptop:grid-cols-2 tablets:grid-cols-[1fr_!important] mt-[22px] justify-between items-center gap-5"
       >
         <ShopServicesItem v-for="service in arr" :key="service" :el="service" />
       </div>

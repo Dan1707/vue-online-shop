@@ -28,11 +28,14 @@ defineProps({
         <ShopSimpleItem v-for="el in itemArr" :key="el" :el="el" />
       </div>
       <div class="p-[10px] border-gray-200 border-y-[2px] hidden laptop:block">
-        <Btn size="md" color="primary-light" ico="right" class="border-none">
+        <Btn
+          size="md"
+          color="primary-light"
+          icoPosition="right"
+          ico="/src/assets/img/arrow.svg"
+          class="border-none"
+        >
           Source now
-          <template #ico>
-            <img src="/src/assets/img/arrow.svg" alt="" />
-          </template>
         </Btn>
       </div>
     </div>
